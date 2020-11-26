@@ -7,7 +7,7 @@ public class MarsRover {
     private int locationY;
     private String direction;
 
-    public MarsRover(int locationX, int locationY, String direction){
+    public MarsRover(int locationX, int locationY, String direction) {
         this.locationX = locationX;
         this.locationY = locationY;
         this.direction = direction;
@@ -18,27 +18,29 @@ public class MarsRover {
     }
 
     private void executeCommand(String command) {
-        if(command.equals("M")){
+        if (command.equals("M")) {
             this.move();
-        }else if(command.equals("L")){
+        } else if (command.equals("L")) {
             this.turnLeft();
         }
     }
 
     private void turnLeft() {
-        if(this.direction.equals("N")){
+        if (this.direction.equals("N")) {
             this.direction = "W";
+        } else if (this.direction.equals("S")) {
+            this.direction = "E";
         }
     }
 
     private void move() {
-        if(this.direction.equals("N")){
+        if (this.direction.equals("N")) {
             this.locationY++;
-        }else if(this.direction.equals("S")){
+        } else if (this.direction.equals("S")) {
             this.locationY--;
-        }else if(this.direction.equals("E")){
+        } else if (this.direction.equals("E")) {
             this.locationX++;
-        }else{
+        } else {
             this.locationX--;
         }
     }
