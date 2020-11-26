@@ -49,9 +49,9 @@ public class MarsRover {
         else if (this.direction.equals("E")) {
             this.direction = "S";
         }
-//        else{
-//            this.direction = "S";
-//        }
+        else{
+            this.direction = "N";
+        }
     }
 
     private void move() {
