@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class MarsRoverController {
+public class Controller {
     private static final String MOVE = "M";
     private static final String TURNLEFT = "L";
     private static final String TURNRIGHT = "R";
