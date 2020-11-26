@@ -20,6 +20,14 @@ public class MarsRover {
     private void executeCommand(String command) {
         if(command.equals("M")){
             this.move();
+        }else if(command.equals("L")){
+            this.turnLeft();
+        }
+    }
+
+    private void turnLeft() {
+        if(this.direction.equals("N")){
+            this.direction = "W";
         }
     }
 
