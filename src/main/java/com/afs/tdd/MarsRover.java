@@ -68,21 +68,31 @@ public class MarsRover {
     private void move() {
         switch(this.direction){
             case "N" :
-                this.locationY++;
+                this.addLocationY();
                 break;
             case "S" :
-                this.locationY--;
+                this.minusLocationY();
                 break;
             case "W" :
-                this.locationX--;
+                this.minusLocationX();
                 break;
             case "E" :
-                this.locationX++;
+                this.addLocationX();
                 break;
         }
     }
 
     public void addLocationX(){
+        this.locationX++;
+    }
+    public void addLocationY(){
+        this.locationY++;
+    }
+    public void minusLocationX(){
+        this.locationX--;
+    }
+    public void minusLocationY(){
+        this.locationY--;
     }
 
     public int getLocationX() {
