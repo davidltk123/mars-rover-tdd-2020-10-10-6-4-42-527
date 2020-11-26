@@ -28,12 +28,14 @@ public class MarsRover {
             this.locationY++;
         }else if(this.direction.equals("S")){
             this.locationY--;
+        }else if(this.direction.equals("E")){
+            this.locationX++;
         }
 
     }
 
     public int getLocationX() {
-        return 0;
+        return this.locationX;
     }
 
     public int getLocationY() {
