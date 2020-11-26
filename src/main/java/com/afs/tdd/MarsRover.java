@@ -13,25 +13,7 @@ public class MarsRover {
         this.direction = direction;
     }
 
-    public void executeCommands(String commands) {
-        Arrays.asList(commands.split("")).forEach(command -> this.executeCommand(command));
-    }
-
-    private void executeCommand(String command) {
-        switch(command){
-            case "M" :
-                this.move();
-                break;
-            case "L" :
-                this.turnLeft();
-                break;
-            case "R" :
-                this.turnRight();
-                break;
-        }
-    }
-
-    private void turnLeft() {
+    public void turnLeft() {
         switch(this.direction){
             case "N" :
                 this.direction = "W";
@@ -48,7 +30,7 @@ public class MarsRover {
         }
     }
 
-    private void turnRight() {
+    public void turnRight() {
         switch(this.direction){
             case "N" :
                 this.direction = "E";
@@ -65,34 +47,21 @@ public class MarsRover {
         }
     }
 
-    private void move() {
+    public void move() {
         switch(this.direction){
             case "N" :
-                this.addLocationY();
+                this.locationY++;
                 break;
             case "S" :
-                this.minusLocationY();
+                this.locationY--;
                 break;
             case "W" :
-                this.minusLocationX();
+                this.locationX--;
                 break;
             case "E" :
-                this.addLocationX();
+                this.locationX++;
                 break;
         }
-    }
-
-    public void addLocationX(){
-        this.locationX++;
-    }
-    public void addLocationY(){
-        this.locationY++;
-    }
-    public void minusLocationX(){
-        this.locationX--;
-    }
-    public void minusLocationY(){
-        this.locationY--;
     }
 
     public int getLocationX() {
