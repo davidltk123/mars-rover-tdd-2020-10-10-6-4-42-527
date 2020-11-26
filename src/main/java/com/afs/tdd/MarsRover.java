@@ -14,7 +14,7 @@ public class MarsRover {
     }
 
     public void executeCommands(String commands) {
-        //Arrays.asList(commands.split("")).forEach(command -> this.executeCommand(command));
+        Arrays.asList(commands.split("")).forEach(command -> this.executeCommand(command));
     }
 
     private void executeCommand(String command) {
@@ -24,6 +24,7 @@ public class MarsRover {
     }
 
     private void move() {
+        this.locationY++;
     }
 
     public int getLocationX() {
@@ -31,10 +32,10 @@ public class MarsRover {
     }
 
     public int getLocationY() {
-        return 0;
+        return this.locationY;
     }
 
     public String getDirection() {
-        return null;
+        return this.direction;
     }
 }
