@@ -46,9 +46,10 @@ public class MarsRover {
         else if (this.direction.equals("S")) {
             this.direction = "W";
         }
-//        else if (this.direction.equals("E")) {
-//            this.direction = "N";
-//        } else{
+        else if (this.direction.equals("E")) {
+            this.direction = "S";
+        }
+//        else{
 //            this.direction = "S";
 //        }
     }
