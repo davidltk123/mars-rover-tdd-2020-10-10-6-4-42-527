@@ -18,51 +18,67 @@ public class MarsRover {
     }
 
     private void executeCommand(String command) {
-        if (command.equals("M")) {
-            this.move();
-        } else if (command.equals("L")) {
-            this.turnLeft();
-        } else{
-            this.turnRight();
+        switch(command){
+            case "M" :
+                this.move();
+                break;
+            case "L" :
+                this.turnLeft();
+                break;
+            case "R" :
+                this.turnRight();
+                break;
         }
     }
 
     private void turnLeft() {
-        if (this.direction.equals("N")) {
-            this.direction = "W";
-        } else if (this.direction.equals("S")) {
-            this.direction = "E";
-        } else if (this.direction.equals("E")) {
-            this.direction = "N";
-        } else{
-            this.direction = "S";
+        switch(this.direction){
+            case "N" :
+                this.direction = "W";
+                break;
+            case "S" :
+                this.direction = "E";
+                break;
+            case "W" :
+                this.direction = "S";
+                break;
+            case "E" :
+                this.direction = "N";
+                break;
         }
     }
 
     private void turnRight() {
-        if (this.direction.equals("N")) {
-            this.direction = "E";
-        }
-        else if (this.direction.equals("S")) {
-            this.direction = "W";
-        }
-        else if (this.direction.equals("E")) {
-            this.direction = "S";
-        }
-        else{
-            this.direction = "N";
+        switch(this.direction){
+            case "N" :
+                this.direction = "E";
+                break;
+            case "S" :
+                this.direction = "W";
+                break;
+            case "W" :
+                this.direction = "N";
+                break;
+            case "E" :
+                this.direction = "S";
+                break;
         }
     }
 
     private void move() {
-        if (this.direction.equals("N")) {
-            this.locationY++;
-        } else if (this.direction.equals("S")) {
-            this.locationY--;
-        } else if (this.direction.equals("E")) {
-            this.locationX++;
-        } else {
-            this.locationX--;
+        switch(this.direction){
+            case "N" :
+                this.locationY++;
+                break;
+            case "S" :
+                this.locationY--;
+                break;
+            case "W" :
+                this.locationX--;
+                break;
+            case "E" :
+                this.locationX++;
+                break;
         }
     }
 
