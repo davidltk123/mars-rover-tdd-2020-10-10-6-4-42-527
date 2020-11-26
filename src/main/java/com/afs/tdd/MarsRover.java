@@ -82,6 +82,9 @@ public class MarsRover {
         }
     }
 
+    public void addLocationX(){
+    }
+
     public int getLocationX() {
         return this.locationX;
     }
