@@ -148,4 +148,16 @@ class MarsRoverTest {
         assertEquals("N",marsRover.getDirection());
     }
 
+    @Test
+    public void should_return_negative_1_1_N_when_executeCommands_given_0_0_N_and_MLMR() {
+        //given
+        MarsRover marsRover = new MarsRover(0,0,"N");
+        //when
+        marsRover.executeCommands("MLMR");
+        //then
+        assertEquals(-1,marsRover.getLocationX());
+        assertEquals(1,marsRover.getLocationY());
+        assertEquals("N",marsRover.getDirection());
+    }
+
 }
