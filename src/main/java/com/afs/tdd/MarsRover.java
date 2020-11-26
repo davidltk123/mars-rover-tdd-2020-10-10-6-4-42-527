@@ -24,7 +24,12 @@ public class MarsRover {
     }
 
     private void move() {
-        this.locationY++;
+        if(this.direction.equals("N")){
+            this.locationY++;
+        }else if(this.direction.equals("S")){
+            this.locationY--;
+        }
+
     }
 
     public int getLocationX() {
