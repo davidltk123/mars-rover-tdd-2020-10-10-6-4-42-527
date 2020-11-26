@@ -4,6 +4,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MarsRoverTest {
+
+    private static final String NORTH = "N";
+    private static final String SOUTH = "S";
+    private static final String EAST = "E";
+    private static final String WEST = "W";
+
     @Test
     public void should_return_y_plus_1_when_executeCommands_given_0_0_N_and_M() {
         //given
@@ -14,7 +20,7 @@ class MarsRoverTest {
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(1,marsRover.getLocationY());
-        assertEquals("N",marsRover.getDirection());
+        assertEquals(NORTH,marsRover.getDirection());
     }
 
     @Test
@@ -27,7 +33,7 @@ class MarsRoverTest {
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(-1,marsRover.getLocationY());
-        assertEquals("S",marsRover.getDirection());
+        assertEquals(SOUTH,marsRover.getDirection());
     }
 
     @Test
@@ -40,7 +46,7 @@ class MarsRoverTest {
         //then
         assertEquals(1,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
-        assertEquals("E",marsRover.getDirection());
+        assertEquals(EAST,marsRover.getDirection());
     }
 
     @Test
@@ -53,7 +59,7 @@ class MarsRoverTest {
         //then
         assertEquals(-1,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
-        assertEquals("W",marsRover.getDirection());
+        assertEquals(WEST,marsRover.getDirection());
     }
 
     @Test
@@ -66,7 +72,7 @@ class MarsRoverTest {
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
-        assertEquals("W",marsRover.getDirection());
+        assertEquals(WEST,marsRover.getDirection());
     }
 
     @Test
@@ -79,7 +85,7 @@ class MarsRoverTest {
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
-        assertEquals("E",marsRover.getDirection());
+        assertEquals(EAST,marsRover.getDirection());
     }
 
     @Test
@@ -92,7 +98,7 @@ class MarsRoverTest {
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
-        assertEquals("N",marsRover.getDirection());
+        assertEquals(NORTH,marsRover.getDirection());
     }
 
     @Test
@@ -105,7 +111,7 @@ class MarsRoverTest {
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
-        assertEquals("S",marsRover.getDirection());
+        assertEquals(SOUTH,marsRover.getDirection());
     }
 
     @Test
@@ -118,7 +124,7 @@ class MarsRoverTest {
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
-        assertEquals("E",marsRover.getDirection());
+        assertEquals(EAST,marsRover.getDirection());
     }
 
     @Test
@@ -131,7 +137,7 @@ class MarsRoverTest {
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
-        assertEquals("W",marsRover.getDirection());
+        assertEquals(WEST,marsRover.getDirection());
     }
 
     @Test
@@ -144,7 +150,7 @@ class MarsRoverTest {
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
-        assertEquals("S",marsRover.getDirection());
+        assertEquals(SOUTH,marsRover.getDirection());
     }
 
     @Test
@@ -157,7 +163,7 @@ class MarsRoverTest {
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
-        assertEquals("N",marsRover.getDirection());
+        assertEquals(NORTH,marsRover.getDirection());
     }
 
     @Test
@@ -170,7 +176,7 @@ class MarsRoverTest {
         //then
         assertEquals(-1,marsRover.getLocationX());
         assertEquals(1,marsRover.getLocationY());
-        assertEquals("N",marsRover.getDirection());
+        assertEquals(NORTH,marsRover.getDirection());
     }
 
 }

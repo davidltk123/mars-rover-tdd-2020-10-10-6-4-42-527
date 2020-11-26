@@ -3,6 +3,10 @@ package com.afs.tdd;
 import java.util.Arrays;
 
 public class MarsRover {
+    private static final String NORTH = "N";
+    private static final String WEST = "W";
+    private static final String SOUTH = "S";
+    private static final String EAST = "E";
     private int locationX;
     private int locationY;
     private String direction;
@@ -15,50 +19,50 @@ public class MarsRover {
 
     public void turnLeft() {
         switch(this.direction){
-            case "N" :
-                this.direction = "W";
+            case NORTH:
+                this.direction = WEST;
                 break;
-            case "S" :
-                this.direction = "E";
+            case SOUTH:
+                this.direction = EAST;
                 break;
-            case "W" :
-                this.direction = "S";
+            case WEST:
+                this.direction = SOUTH;
                 break;
-            case "E" :
-                this.direction = "N";
+            case EAST:
+                this.direction = NORTH;
                 break;
         }
     }
 
     public void turnRight() {
         switch(this.direction){
-            case "N" :
-                this.direction = "E";
+            case NORTH :
+                this.direction = EAST;
                 break;
-            case "S" :
-                this.direction = "W";
+            case SOUTH :
+                this.direction = WEST;
                 break;
-            case "W" :
-                this.direction = "N";
+            case WEST :
+                this.direction = NORTH;
                 break;
-            case "E" :
-                this.direction = "S";
+            case EAST :
+                this.direction = SOUTH;
                 break;
         }
     }
 
     public void move() {
         switch(this.direction){
-            case "N" :
+            case NORTH :
                 this.locationY++;
                 break;
-            case "S" :
+            case SOUTH :
                 this.locationY--;
                 break;
-            case "W" :
+            case WEST :
                 this.locationX--;
                 break;
-            case "E" :
+            case EAST :
                 this.locationX++;
                 break;
         }

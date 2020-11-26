@@ -5,6 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MarsRoverController {
+    private static final String MOVE = "M";
+    private static final String TURNLEFT = "L";
+    private static final String TURNRIGHT = "R";
     //private List<Command> commandList = new ArrayList<>();
 
     public void executeCommands(MarsRover marsRover, String commands){
@@ -13,15 +16,15 @@ public class MarsRoverController {
 
     private void executeCommand(MarsRover marsRover, String command) {
         switch(command){
-            case "M" :
+            case MOVE:
                 //this.commandList.add(new MoveCommand(marsRover));
                 new MoveCommand(marsRover).execute();
                 break;
-            case "L" :
+            case TURNLEFT:
                 //this.commandList.add(new TurnLeftCommand(marsRover));
                 new TurnLeftCommand(marsRover).execute();
                 break;
-            case "R" :
+            case TURNRIGHT:
                 //this.commandList.add(new TurnRightCommand(marsRover));
                 new TurnRightCommand(marsRover).execute();
                 break;
