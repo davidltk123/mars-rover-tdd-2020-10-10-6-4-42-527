@@ -30,8 +30,9 @@ public class MarsRover {
             this.locationY--;
         }else if(this.direction.equals("E")){
             this.locationX++;
+        }else{
+            this.locationX--;
         }
-
     }
 
     public int getLocationX() {
