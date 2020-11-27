@@ -15,13 +15,12 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0,"N");
         Controller controller = new Controller(marsRover);
+        LocationInfo expectedLocationInfo = new LocationInfo(0,1,"N");
         //when
         controller.receiveCommands("M");
         controller.executeCommands();
         //then
-        assertEquals(0,marsRover.getLocationX());
-        assertEquals(1,marsRover.getLocationY());
-        assertEquals(NORTH,marsRover.getDirection());
+        assertEquals(expectedLocationInfo,marsRover.getLocationInfo());
     }
 
     @Test
@@ -29,13 +28,12 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0,"S");
         Controller controller = new Controller(marsRover);
+        LocationInfo expectedLocationInfo = new LocationInfo(0,-1,"S");
         //when
         controller.receiveCommands("M");
         controller.executeCommands();
         //then
-        assertEquals(0,marsRover.getLocationX());
-        assertEquals(-1,marsRover.getLocationY());
-        assertEquals(SOUTH,marsRover.getDirection());
+        assertEquals(expectedLocationInfo,marsRover.getLocationInfo());
     }
 
     @Test
@@ -43,13 +41,12 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0,"E");
         Controller controller = new Controller(marsRover);
+        LocationInfo expectedLocationInfo = new LocationInfo(1,0,"E");
         //when
         controller.receiveCommands("M");
         controller.executeCommands();
         //then
-        assertEquals(1,marsRover.getLocationX());
-        assertEquals(0,marsRover.getLocationY());
-        assertEquals(EAST,marsRover.getDirection());
+        assertEquals(expectedLocationInfo,marsRover.getLocationInfo());
     }
 
     @Test
@@ -57,13 +54,12 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0,"W");
         Controller controller = new Controller(marsRover);
+        LocationInfo expectedLocationInfo = new LocationInfo(-1,0,"W");
         //when
         controller.receiveCommands("M");
         controller.executeCommands();
         //then
-        assertEquals(-1,marsRover.getLocationX());
-        assertEquals(0,marsRover.getLocationY());
-        assertEquals(WEST,marsRover.getDirection());
+        assertEquals(expectedLocationInfo,marsRover.getLocationInfo());
     }
 
     @Test
@@ -71,13 +67,12 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0,"N");
         Controller controller = new Controller(marsRover);
+        LocationInfo expectedLocationInfo = new LocationInfo(0,0,"W");
         //when
         controller.receiveCommands("L");
         controller.executeCommands();
         //then
-        assertEquals(0,marsRover.getLocationX());
-        assertEquals(0,marsRover.getLocationY());
-        assertEquals(WEST,marsRover.getDirection());
+        assertEquals(expectedLocationInfo,marsRover.getLocationInfo());
     }
 
     @Test
@@ -85,13 +80,12 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0,"S");
         Controller controller = new Controller(marsRover);
+        LocationInfo expectedLocationInfo = new LocationInfo(0,0,"E");
         //when
         controller.receiveCommands("L");
         controller.executeCommands();
         //then
-        assertEquals(0,marsRover.getLocationX());
-        assertEquals(0,marsRover.getLocationY());
-        assertEquals(EAST,marsRover.getDirection());
+        assertEquals(expectedLocationInfo,marsRover.getLocationInfo());
     }
 
     @Test
@@ -99,13 +93,12 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0,"E");
         Controller controller = new Controller(marsRover);
+        LocationInfo expectedLocationInfo = new LocationInfo(0,0,"N");
         //when
         controller.receiveCommands("L");
         controller.executeCommands();
         //then
-        assertEquals(0,marsRover.getLocationX());
-        assertEquals(0,marsRover.getLocationY());
-        assertEquals(NORTH,marsRover.getDirection());
+        assertEquals(expectedLocationInfo,marsRover.getLocationInfo());
     }
 
     @Test
@@ -113,13 +106,12 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0,"W");
         Controller controller = new Controller(marsRover);
+        LocationInfo expectedLocationInfo = new LocationInfo(0,0,"S");
         //when
         controller.receiveCommands("L");
         controller.executeCommands();
         //then
-        assertEquals(0,marsRover.getLocationX());
-        assertEquals(0,marsRover.getLocationY());
-        assertEquals(SOUTH,marsRover.getDirection());
+        assertEquals(expectedLocationInfo,marsRover.getLocationInfo());
     }
 
     @Test
@@ -127,13 +119,12 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0,"N");
         Controller controller = new Controller(marsRover);
+        LocationInfo expectedLocationInfo = new LocationInfo(0,0,"E");
         //when
         controller.receiveCommands("R");
         controller.executeCommands();
         //then
-        assertEquals(0,marsRover.getLocationX());
-        assertEquals(0,marsRover.getLocationY());
-        assertEquals(EAST,marsRover.getDirection());
+        assertEquals(expectedLocationInfo,marsRover.getLocationInfo());
     }
 
     @Test
@@ -141,13 +132,12 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0,"S");
         Controller controller = new Controller(marsRover);
+        LocationInfo expectedLocationInfo = new LocationInfo(0,0,"W");
         //when
         controller.receiveCommands("R");
         controller.executeCommands();
         //then
-        assertEquals(0,marsRover.getLocationX());
-        assertEquals(0,marsRover.getLocationY());
-        assertEquals(WEST,marsRover.getDirection());
+        assertEquals(expectedLocationInfo,marsRover.getLocationInfo());
     }
 
     @Test
@@ -155,13 +145,12 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0,"E");
         Controller controller = new Controller(marsRover);
+        LocationInfo expectedLocationInfo = new LocationInfo(0,0,"S");
         //when
         controller.receiveCommands("R");
         controller.executeCommands();
         //then
-        assertEquals(0,marsRover.getLocationX());
-        assertEquals(0,marsRover.getLocationY());
-        assertEquals(SOUTH,marsRover.getDirection());
+        assertEquals(expectedLocationInfo,marsRover.getLocationInfo());
     }
 
     @Test
@@ -169,13 +158,12 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0,"W");
         Controller controller = new Controller(marsRover);
+        LocationInfo expectedLocationInfo = new LocationInfo(0,0,"N");
         //when
         controller.receiveCommands("R");
         controller.executeCommands();
         //then
-        assertEquals(0,marsRover.getLocationX());
-        assertEquals(0,marsRover.getLocationY());
-        assertEquals(NORTH,marsRover.getDirection());
+        assertEquals(expectedLocationInfo,marsRover.getLocationInfo());
     }
 
     @Test
@@ -183,13 +171,12 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0,"N");
         Controller controller = new Controller(marsRover);
+        LocationInfo expectedLocationInfo = new LocationInfo(-1,1,"N");
         //when
         controller.receiveCommands("MLMR");
         controller.executeCommands();
         //then
-        assertEquals(-1,marsRover.getLocationX());
-        assertEquals(1,marsRover.getLocationY());
-        assertEquals(NORTH,marsRover.getDirection());
+        assertEquals(expectedLocationInfo,marsRover.getLocationInfo());
     }
 
 }
