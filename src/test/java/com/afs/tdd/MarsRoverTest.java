@@ -16,7 +16,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0,0,"N");
         Controller controller = new Controller();
         //when
-        controller.executeCommands(marsRover,"M");
+        controller.addCommands(marsRover,"M");
+        controller.executeCommands();
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(1,marsRover.getLocationY());
@@ -29,7 +30,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0,0,"S");
         Controller controller = new Controller();
         //when
-        controller.executeCommands(marsRover,"M");
+        controller.addCommands(marsRover,"M");
+        controller.executeCommands();
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(-1,marsRover.getLocationY());
@@ -42,7 +44,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0,0,"E");
         Controller controller = new Controller();
         //when
-        controller.executeCommands(marsRover,"M");
+        controller.addCommands(marsRover,"M");
+        controller.executeCommands();
         //then
         assertEquals(1,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
@@ -55,7 +58,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0,0,"W");
         Controller controller = new Controller();
         //when
-        controller.executeCommands(marsRover,"M");
+        controller.addCommands(marsRover,"M");
+        controller.executeCommands();
         //then
         assertEquals(-1,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
@@ -68,7 +72,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0,0,"N");
         Controller controller = new Controller();
         //when
-        controller.executeCommands(marsRover,"L");
+        controller.addCommands(marsRover,"L");
+        controller.executeCommands();
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
@@ -81,7 +86,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0,0,"S");
         Controller controller = new Controller();
         //when
-        controller.executeCommands(marsRover,"L");
+        controller.addCommands(marsRover,"L");
+        controller.executeCommands();
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
@@ -94,7 +100,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0,0,"E");
         Controller controller = new Controller();
         //when
-        controller.executeCommands(marsRover,"L");
+        controller.addCommands(marsRover,"L");
+        controller.executeCommands();
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
@@ -107,7 +114,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0,0,"W");
         Controller controller = new Controller();
         //when
-        controller.executeCommands(marsRover,"L");
+        controller.addCommands(marsRover,"L");
+        controller.executeCommands();
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
@@ -120,7 +128,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0,0,"N");
         Controller controller = new Controller();
         //when
-        controller.executeCommands(marsRover,"R");
+        controller.addCommands(marsRover,"R");
+        controller.executeCommands();
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
@@ -133,7 +142,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0,0,"S");
         Controller controller = new Controller();
         //when
-        controller.executeCommands(marsRover,"R");
+        controller.addCommands(marsRover,"R");
+        controller.executeCommands();
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
@@ -146,7 +156,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0,0,"E");
         Controller controller = new Controller();
         //when
-        controller.executeCommands(marsRover,"R");
+        controller.addCommands(marsRover,"R");
+        controller.executeCommands();
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
@@ -159,7 +170,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0,0,"W");
         Controller controller = new Controller();
         //when
-        controller.executeCommands(marsRover,"R");
+        controller.addCommands(marsRover,"R");
+        controller.executeCommands();
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
@@ -172,7 +184,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0,0,"N");
         Controller controller = new Controller();
         //when
-        controller.executeCommands(marsRover,"MLMR");
+        controller.addCommands(marsRover,"MLMR");
+        controller.executeCommands();
         //then
         assertEquals(-1,marsRover.getLocationX());
         assertEquals(1,marsRover.getLocationY());
