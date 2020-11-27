@@ -19,19 +19,19 @@ public class Controller {
         Arrays.asList(commands.split("")).forEach(command -> {
             switch(command){
                 case MOVE:
-                    this.commandList.add(new MoveCommand(this.marsRover));
+                    this.commandList.add(new MoveCommand());
                     break;
                 case TURNLEFT:
-                    this.commandList.add(new TurnLeftCommand(this.marsRover));
+                    this.commandList.add(new TurnLeftCommand());
                     break;
                 case TURNRIGHT:
-                    this.commandList.add(new TurnRightCommand(this.marsRover));
+                    this.commandList.add(new TurnRightCommand());
                     break;
             }
         });
     }
 
     public void executeCommands() {
-        commandList.forEach(Command::execute);
+        commandList.forEach(command -> command.execute(this.marsRover));
     }
 }

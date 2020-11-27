@@ -1,14 +1,14 @@
 package com.afs.tdd;
 
 public class TurnLeftCommand implements Command{
-    private MarsRover marsRover;
-
-    public TurnLeftCommand(MarsRover marsRover){
-        this.marsRover = marsRover;
-    }
+//    private MarsRover marsRover;
+//
+//    public TurnLeftCommand(MarsRover marsRover){
+//        this.marsRover = marsRover;
+//    }
 
     @Override
-    public void execute() {
-        this.marsRover.turnLeft();
+    public void execute(MarsRover marsRover) {
+        marsRover.turnLeft();
     }
 }
