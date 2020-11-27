@@ -28,6 +28,5 @@ public class Controller {
 
     public void executeCommands() {
         commandList.forEach(Command::execute);
-        commandList.clear();
     }
 }
