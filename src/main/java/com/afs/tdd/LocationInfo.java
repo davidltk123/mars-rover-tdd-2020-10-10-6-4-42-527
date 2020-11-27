@@ -81,8 +81,6 @@ public class LocationInfo {
         return false;
     }
 
-
-
 //    public void addLocationX(){
 //        this.locationX++;
 //    }
