@@ -8,19 +8,24 @@ public class Controller {
     private static final String MOVE = "M";
     private static final String TURNLEFT = "L";
     private static final String TURNRIGHT = "R";
+    private MarsRover marsRover;
     private List<Command> commandList = new ArrayList<>();
 
-    public void addCommands(MarsRover marsRover, String commands){
+    public Controller(MarsRover marsRover){
+        this.marsRover = marsRover;
+    }
+
+    public void receiveCommands(String commands){
         Arrays.asList(commands.split("")).forEach(command -> {
             switch(command){
                 case MOVE:
-                    this.commandList.add(new MoveCommand(marsRover));
+                    this.commandList.add(new MoveCommand(this.marsRover));
                     break;
                 case TURNLEFT:
-                    this.commandList.add(new TurnLeftCommand(marsRover));
+                    this.commandList.add(new TurnLeftCommand(this.marsRover));
                     break;
                 case TURNRIGHT:
-                    this.commandList.add(new TurnRightCommand(marsRover));
+                    this.commandList.add(new TurnRightCommand(this.marsRover));
                     break;
             }
         });
