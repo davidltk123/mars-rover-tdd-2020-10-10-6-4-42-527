@@ -81,17 +81,4 @@ public class LocationInfo {
         return false;
     }
 
-//    public void addLocationX(){
-//        this.locationX++;
-//    }
-//    public void addLocationY(){
-//        this.locationY++;
-//    }
-//    public void decreaseLocationX(){
-//        this.locationX--;
-//    }
-//    public void decreaseLocationY(){
-//        this.locationY--;
-//    }
-
 }

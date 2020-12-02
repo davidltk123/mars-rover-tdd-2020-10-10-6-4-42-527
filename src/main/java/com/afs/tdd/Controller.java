@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Controller {
     private static final String MOVE = "M";
-    private static final String TURNLEFT = "L";
-    private static final String TURNRIGHT = "R";
+    private static final String TURN_LEFT = "L";
+    private static final String TURN_RIGHT = "R";
     private MarsRover marsRover;
     private List<Command> commandList = new ArrayList<>();
 
@@ -21,10 +21,10 @@ public class Controller {
                 case MOVE:
                     this.commandList.add(new MoveCommand());
                     break;
-                case TURNLEFT:
+                case TURN_LEFT:
                     this.commandList.add(new TurnLeftCommand());
                     break;
-                case TURNRIGHT:
+                case TURN_RIGHT:
                     this.commandList.add(new TurnRightCommand());
                     break;
             }

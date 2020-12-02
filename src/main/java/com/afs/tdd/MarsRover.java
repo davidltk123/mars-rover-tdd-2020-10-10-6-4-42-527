@@ -1,10 +1,6 @@
 package com.afs.tdd;
 
 public class MarsRover {
-    private static final String NORTH = "N";
-    private static final String WEST = "W";
-    private static final String SOUTH = "S";
-    private static final String EAST = "E";
     private LocationInfo locationInfo;
 
     public MarsRover(int locationX, int locationY, String direction) {
